@@ -1,5 +1,16 @@
 import Movie from "../models/movieModel.js";
 
+async function getAllMovies(req, res) {
+    try {
+
+        const movies = await Movie.find()
+            .select("title");
+        res.json(movies);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+}
+
 async function createMovie(req, res) {
     const { title, genre, created, director } = req.body;
 
@@ -18,4 +29,4 @@ async function createMovie(req, res) {
     }
 }
 
-export {getFiveRandomMovies, getMovieByID, createMovie};
+export {getAllMovies, createMovie};
