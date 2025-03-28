@@ -40,11 +40,6 @@ PORT=4000. För att lyckas med MongoDb anslutningen så behövs MongoDb Atlas sa
 * Metod: DELETE
 * Tar bort en filmen vars id angetts
 
-
-Metod: GET
-
-Beskrivning: Hämtar en lista med alla filmer i databasen.
-
 ## Felmeddelanden
 
 - **400 Bad Request**: När en förfrågan saknar nödvändiga info.
