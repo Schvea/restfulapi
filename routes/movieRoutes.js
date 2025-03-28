@@ -3,9 +3,7 @@ import { getFiveRandomMovies, getMovieByID, createMovie } from "../controlllers/
 
 const movieRouter = Router();
 
-movieRouter.get("/", getFiveRandomMovies);
-
-movieRouter.get('/:movieID', /*getMovieByID*/);
+movieRouter.get("/", getAllMovies);
 
 movieRouter.post("/", createMovie);
 
