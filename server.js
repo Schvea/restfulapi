@@ -3,6 +3,9 @@ import dotenv from "dotenv";
 import { get } from "mongoose";
 import connectDB from "./database/db.js";
 import movieRouter from "./routes/movieRoutes.js";
+import cors from 'cors';
+
+
 
 dotenv.config();
 connectDB();
@@ -17,6 +20,8 @@ app.use(express.json());
 app.get('/', (req, res) => res.send("hej"))
 
 app.use("/api/movies", movieRouter);
+
+app.use(cors());
 
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
