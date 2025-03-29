@@ -45,3 +45,16 @@ PORT=4000. För att lyckas med MongoDb anslutningen så behövs MongoDb Atlas sa
 - **400 Bad Request**: När en förfrågan saknar nödvändiga info.
 - **404 Not Found**: När filmen inte finns i databasen.
 - **500 Internal Server Error**: Om något oväntat skett på servern.
+
+## cURL anrop
+lokalt
+
+post för att skicka in data: curl -X POST http://localhost:4000/api/movies -H "Content-Type: application/json" -d "{\"title\": \"\", \"created\": \"\", \"genre\": \"\", \"director\": \"\"}" 
+
+get för att hämta data: curl http://localhost:4000/api/movies 
+
+put för att uppdatera data: curl -X PUT http://localhost:4000/api/movies/:id -H "Content-Type: application/json" -d "{\"title\": \"\"}"
+
+delete för att radera data: curl -X DELETE http://localhost:4000/api/:id
+
+
