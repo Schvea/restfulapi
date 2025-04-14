@@ -57,4 +57,13 @@ put för att uppdatera data: curl -X PUT http://localhost:4000/api/movies/:id -H
 
 delete för att radera data: curl -X DELETE http://localhost:4000/api/:id
 
+public
+
+För att skicka in data: curl -X POST https://restfulapi-1.onrender.com/api/movies -H "Content-Type: application/json" -d "{\"title\":\"\",\"\":år,\"director\":\"\",\"genre\":\"\",\"rating\":\"created\":\"\"}"
+
+För att hämta data: curl -X GET https://restfulapi-1.onrender.com/api/movies
+
+För put:curl -X PUT https://restfulapi-1.onrender.com/api/movies/<movieID> -H "Content-Type: application/json" -d "{\"title\":\"\"\"year\":\"director\":\"\",\"genre\":\"\",\"rating\",\"created\":\"\"}"
+
+För delete: curl -X DELETE https://restfulapi-1.onrender.com/api/movies/<movieID> -H "Content-Type: application/json"
 
